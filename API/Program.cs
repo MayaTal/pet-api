@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<IMongoClient, MongoClient>(sp =>
 {
     //I've tried to put the connection string in application.json but didn't succeed.
-    var connectionString = "mongodb+srv://mayatal:IfRCVnGTB4UVYjz0@cluster0.mprpaxt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+    var connectionString = "mongodb+srv://mayatal:<password>@cluster0.mprpaxt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
     return new MongoClient(connectionString);
 });
 
